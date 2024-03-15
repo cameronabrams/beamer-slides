@@ -1,0 +1,25 @@
+\begin{frame}{Why No One Should Never Do (Just) MD}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+\path(nw) ++(-0.5,0) node(text)[anchor=north west,text 
+width=\textwidth]{
+\begin{itemize}
+\item $\mathbb{R}^{3N} \mapsto \left[0,L\right]^{3N}$, and \textcolor{blue}{boxlength} $L$ is never large 
+enough;
+\item $V(\xb)$ is never accurate enough (usually empirical);
+\item $\displaystyle n_T$ is \textcolor{red}{never large enough} for $\displaystyle \left\{\xb_i, i=1,\dots,n_T\right\}$ to reveal $\rho(\xb)$.\\
+\textcolor{red}{\bf Why?}\ \textcolor{blue}{Undersampled}, slow, undetected {\bf collective variables}:
+$\displaystyle \thetab : \mathbb{R}^{3N}\mapsto\mathbb{R}^{M} \ \ \mbox{and}\ \ \ \mbox{maybe}\ \ M \ll 3N\ \ \ 
+\Rightarrow\ \ \zb^{M} = \thetab(\xb^{3N})$
+\end{itemize}
+};
+\path(nw) ++(0,-3.5) node(corner)[graphics,anchor=north 
+west]{\includegraphics[width=\textwidth]{pathways.png}};
+\path(nw) ++(6,-4.0) node(text)[anchor=north west,text width=0.5\textwidth]{$\ds \thetab[\xb(t)] \mapsto \zb(t)$};
+\path(nw) ++(0.5,-3.75) node(text)[anchor=north west,text width=0.5\textwidth]{$\ds z_1$};
+\path(nw) ++(0.25,-4.25) node(text)[anchor=north west,text width=0.5\textwidth]{$\ds z_2$};
+\draw[->,thick,color=black] (0.05\bbw,0.45\bbh) -- (0.05\bbw,0.35\bbh);
+\draw[->,thick,color=black] (0.1\bbw,0.55\bbh) -- (0.2\bbw,0.55\bbh);
+\end{tikzpicture}
+\end{frame}

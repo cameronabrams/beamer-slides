@@ -1,0 +1,54 @@
+\begin{frame}[fragile]{Classical and Statistical Thermodynamics}
+\begin{tikzpicture}[scaleall=1.0]
+\pcuad{\textwidth}{\textheight}
+%\showcuad
+%\path(nw) ++(2,-0.25) node(text)[anchor=north west,text 
+%width=0.75\textwidth]{Central task:  {\it Prediction of equilibrium states}};
+\path(nw) ++(-0.5,-0.5) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\underline{Flavor:}};
+\path(nw) ++(2.0,-0.5) node(text)[anchor=north west, text 
+width=0.5\textwidth]{\underline{What we wish we knew:}};
+\path(nw) ++(6.5,-0.5) node(text)[anchor=north west, text 
+width=\textwidth]{\underline{What we'll settle for:}};
+\path(nw) ++(-0.5,-1.5) node(text)[anchor=north west, text 
+width=0.5\textwidth]{\textcolor{red}{Classical}};
+\path(nw) ++(2.0,-1.0) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{red}{\small Fundamental equation\\ of state; e.g.,}};
+\path(nw) ++(2.0,-2.0) node(text)[anchor=north west, text 
+width=0.5\textwidth]{$\ds \gm(T,P,y_1,y_2,\dots)$};
+\path(nw) ++(6.5,-1.0) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{red}{\small Partial derivatives; e.g.,}};
+\path(nw) ++(6.5,-1.5) node(text)[anchor=north west,text 
+width=0.5\textwidth]{$\ds \vm=-\tpd{\gm}{P}{T}$ \textcolor{red}{and}};
+\path(nw) ++(8,-2.5) node(text)[anchor=north west,text width=0.5\textwidth]{$\ds 
+\cp = -T\tpdn{\gm}{T}{P}{2}$};
+\path(nw) ++(-0.5,-4.0) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{blue}{Statistical}};
+\path(nw) ++(2.0,-3.75) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{blue}{\small Partition function}};
+\path(nw) ++(0.5,-4.15) node(text)[anchor=north west,text 
+width=0.5\textwidth]{
+\begin{align*}
+\ds  \mathcal{Z} & \ds =\int_{\mathbb{R}^{3N}} d\xb\ e^{-\beta V(\xb)},\\
+    \mbox{\textcolor{blue}{where}}\ \beta& \equiv \frac{1}{k_BT},\\
+            V(\xb)& = \left\{\mbox{potential energy}\right\}\\
+            \xb &\equiv \underbrace{\left\{x_1,y_1,z_1,\dots,x_N,y_N,z_N\right\}}_{\mbox{\textcolor{blue}{configuration}}}
+\end{align*}
+};
+\path(nw) ++(6.5,-3.75) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{blue}{\small Ensemble averages; e.g.,}};
+\path(nw) ++(6.5,-4.15) node(text)[anchor=north west,text 
+width=0.5\textwidth]{$\ds \langle X\rangle=\int_{\mathbb{R}^{3N}} d\xb\ X(\xb) \rho(\xb)$};
+\path(nw) ++(6.5,-5.1) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{blue}{\small evaluated via numerical quadrature \\ using a finite 
+number of uncorrelated  \\
+configurational samples,}};
+\path(nw) ++(6.5,-6.6) node(text)[anchor=north west,text 
+width=0.5\textwidth]{$\ds \xb_i,\ i=1,2,\dots$};
+\path(nw) ++(6.5,-7.2) node(text)[anchor=north west,text 
+width=0.5\textwidth]{\textcolor{blue}{\small randomly drawn from}};
+\path(nw) ++(6.5,-7.5) node(text)[anchor=north west,text 
+width=0.5\textwidth]{$\ds \rho(\xb) = \frac{1}{\mathcal{Z}}e^{-\beta V(\xb)}$};
+\end{tikzpicture}
+
+\end{frame}

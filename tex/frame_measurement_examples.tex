@@ -1,0 +1,12 @@
+\begin{frame}[fragile]{Example Measurements}
+\begin{tikzpicture}[scaleall=1.0,node distance=1cm]
+\pcuad{\textwidth}{\textheight}
+\path(nw) ++(-0.25,-0.75) node(E)[anchor=north west]{\includegraphics[width=0.5\textwidth]{E-sum.png}};
+\path(E.south) ++(1,-0.1) node(Elabel)[anchor=north,text width=0.5\textwidth] {Elastic modulus};
+\path(E.south east) ++(0.2,0) node(Tg)[anchor=south west] {
+\includegraphics[width=0.5\textwidth]{Tg.png}
+};
+\path(Tg.south) ++(1,-0.1) node(Tglabel)[anchor=north,text width=0.5\textwidth]{Glass-transition temperature};
+\path(sw) ++(0,0.7) node(citation)[anchor=south west,text width=\textwidth] {\setlength{\baselineskip}{0em}{\tiny M. Huang, N. Alvarez, G. Palmese, and C. F. Abrams, ``The effect of network topology on material properties in vinyl-ester/styrene thermoset polymers using molecular dynamics simulations and time-temperature superposition,'' {\it Computational Materials Science} 2022;{\bf 27}:111264, doi:10.1016/j.commatsci.2022.111264}};
+\end{tikzpicture}
+\end{frame}

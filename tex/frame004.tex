@@ -1,0 +1,20 @@
+
+\textcolor{blue}{L. Boltzmann}:  ``Dynamical trajectory $\xb(t)$ can sample 
+$\rho(\xb)$.''
+
+\begin{displaymath}
+\langle X \rangle = \lim_{n_T\rightarrow\infty}\frac{1}{n_T}\sum_{i=1}^{n_T} 
+X[\xb(t_i)] = \int d\xb\ X(\xb)\ \rho(\xb)
+\end{displaymath}
+
+...or, only an {\em infinitely long} trajectory \underline{reveals} $\rho(\xb)$.
+
+\textcolor{green!80!black}{Molecular dynamics}:  generation of explicit 
+3$N$-dimensional numerical trajectories $\xb(t)$, given
+\begin{itemize}
+\item \textcolor{red}{initial conditions}\ $\xb(0)$ and $\dot{\xb}(0)$;
+\item \textcolor{green!80!black}{Potential-energy function (all interatomic interactions)}\ $V(\xb)$; and
+\item \textcolor{blue}{an equation of motion}\ $\ddot{\xb} = f(\xb,\dot{\xb})$ \\ \textcolor{blue}{encoded in a suitable numerical integrator} $\xb(t+\Delta t) \gets \xb(t) + \delta\xb(\xb,\dot{\xb},\nabla_{\xb}V,\Delta t)$
+\end{itemize}
+
+\end{frame}

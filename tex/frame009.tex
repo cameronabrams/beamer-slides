@@ -1,0 +1,23 @@
+
+Basic idea:  Map $3N$-dimensional configuration space onto a low-dimensional 
+``collective variable'' space:
+\begin{align*}
+\thetab : \mathbb{R}^{3N}\mapsto\mathbb{R}^{M} \ \ \mbox{and}\ \ \ M \ll 3N\ \ \ 
+&\Rightarrow\ \ \zb^{M} = \thetab(\xb^{3N})\\
+\Rightarrow\ e^{-\beta F(\zb)} = \int d\xb \ 
+\delta(\thetab(\xb)-\zb)\ \rho(\xb) & \equiv P(\zb)
+\end{align*}
+\vspace{-0.5cm}
+\begin{itemize}
+\item Probability $P(\zb) = e^{-\beta F(\zb)}$:  \textcolor{blue}{\em central objective of 
+enhanced sampling};
+\item \textcolor{red}{Problem}: Need to bias sampling to transit regions in CV-space with low $P$ (AKA ``free-energy barriers'').
+\item \textcolor{green!80!black}{Optimum bias}: $\ds V_b(\xb) = V(\xb) - F[\thetab(\xb)]$:
+\begin{displaymath}
+\Rightarrow\ \langle X \rangle = \int d\zb\ \langle X\rangle_{\zb}\  P(\zb) = \frac{\langle X e^{\beta F}\rangle_b}{\langle e^{\beta F}\rangle_b}.
+\end{displaymath}
+%\item $\langle X\rangle_{\zb}$ via {\em restricted sampling};
+\item If we have $F(\zb)$, we can sample better, but we need to sample {\em perfectly} already to get $F(\zb)$...
+\item \textcolor{blue}{\it What if we can sample better without knowing $F(\zb)$?}
+\end{itemize}
+\end{frame}
